@@ -16,7 +16,7 @@ public class ChallengeTest {
         Dog dog2 = new Dog("Dog" + new Random().nextInt());
         capture.expect(
                 Matchers.containsString(
-                        dog1.getName() + " is walking\n" + dog2.getName() + " is walking\n"));
+                        dog1.getName() + " is walking" + System.lineSeparator() + dog2.getName() + " is walking" + System.lineSeparator()));
 
         Challenge.allDogsWalk(dog1, fish, dog2);
     }
