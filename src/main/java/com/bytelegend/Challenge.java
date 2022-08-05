@@ -1,5 +1,5 @@
 package com.bytelegend;
-import java.util.stream.Stream;
+
 public class Challenge {
     public static void main(String[] args) {
         allDogsWalk(new Fish("Fish"), new Dog("Dog"));
@@ -10,9 +10,9 @@ public class Challenge {
      * (`Dog.walk()`).
      */
     public static void allDogsWalk(Animal... animals) {
-        Stream.of(animals)
-                .filter(animal -> animal instanceof Dog)
-                .forEach(animal -> ((Dog) animal).walk());
+        for (Animal animal : animals) {
+            ((Dog) animal).walk();
+        }
     }
 }
 
