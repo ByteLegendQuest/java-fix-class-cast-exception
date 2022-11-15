@@ -9,10 +9,9 @@ public class Challenge {
      * `allDogsWalk(Animal... animals)` method makes all `Dog` objects in the `animals` array walk
      * (`Dog.walk()`).
      */
-   public static void allDogsWalk(Animal... animals) {
+    public static void allDogsWalk(Animal... animals) {
         for (Animal animal : animals) {
-            if (animal instanceof Dog)
-                ((Dog) animal).walk();
+            ((Dog) animal).walk();
         }
     }
 }
