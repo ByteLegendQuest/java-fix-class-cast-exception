@@ -11,9 +11,7 @@ public class Challenge {
      */
     public static void allDogsWalk(Animal... animals) {
         for (Animal animal : animals) {
-            if(animal instanceof Fish) {
-                ((Fish)animal).swim();
-            } else {
+            if (animal instanceof Dog){
                 ((Dog)animal).walk();
             }
         }
@@ -36,6 +34,6 @@ class Dog extends Animal {
     }
 
     public void walk() {
-        System.out.println(getName() + " is walking");
+        System.out.print(getName() + " is walking\n");
     }
 }
