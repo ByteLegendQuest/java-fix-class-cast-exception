@@ -11,10 +11,7 @@ public class Challenge {
      */
     public static void allDogsWalk(Animal... animals) {
         for (Animal animal : animals) {
-            if (animal instanceof Dog) {
-                ((Dog) animal).walk();
-            }
-
+            ((Dog) animal).walk();
         }
     }
 }
