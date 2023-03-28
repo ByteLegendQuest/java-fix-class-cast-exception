@@ -1,7 +1,5 @@
 package com.bytelegend;
 
-import java.util.Arrays;
-
 public class Challenge {
     public static void main(String[] args) {
         allDogsWalk(new Fish("Fish"), new Dog("Dog"));
@@ -12,11 +10,9 @@ public class Challenge {
      * (`Dog.walk()`).
      */
     public static void allDogsWalk(Animal... animals) {
-        Arrays.asList(animals).stream().filter(animal -> {
-            return animal instanceof Dog;
-        }).forEach(dog -> {
-            ((Dog) dog).walk();
-        });
+        for (Animal animal : animals) {
+            ((Dog) animal).walk();
+        }
     }
 }
 
